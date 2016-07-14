@@ -1,0 +1,12 @@
+<h1>Your current inventory consist of:</h1>
+<ul>
+  @foreach( var singleCd in Model)
+  {
+      <li>Artist: @singleCd.GetArtist()</li>
+
+      <li>Title: @singleCd.GetTitle()</li>
+  }
+</ul>
+<a href="/searchByArtist"> Search Cds by Artists</a>
+<a href="/addNew"> Add More Cds</a>
+<a href="/allCds"> View All Cds</a>
