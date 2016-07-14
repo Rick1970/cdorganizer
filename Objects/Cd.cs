@@ -50,7 +50,9 @@ namespace CdList.Objects
       SearchCds.Clear();
       foreach( var everyCds in _instances)
       {
-        if(everyCds.GetArtist()==artists)
+        string inputArtists = artists.ToLower();
+        string invArtist=everyCds.GetArtist().ToLower();
+        if(invArtist.Contains(inputArtists))
         {
           SearchCds.Add(everyCds);
         }
